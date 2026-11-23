@@ -233,7 +233,7 @@ html:not(.js) #next-move { display: none; }
 .stack-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px 32px; flex-wrap: wrap; }
 .stack-head h2 { font-size: var(--step-lead); font-weight: 500; line-height: 1.2; }
 .stack-head p { color: var(--muted); }
-.shelf { display: flex; gap: 6px; margin-top: 32px; height: 480px; }
+.shelf { display: flex; gap: 6px; margin-top: 32px; height: 310px; }
 .shelf li {
   flex: 1 1 0; min-width: 0;
   writing-mode: vertical-rl;
