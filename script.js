@@ -111,6 +111,8 @@
     window.addEventListener('resize', fit);
   }
 
+  document.querySelectorAll('#shelf li').forEach((li, i) => li.style.setProperty('--i', i));
+
   // The shelf: a spine can be picked by touch or keyboard as well as by pointing.
   const shelf = document.getElementById('shelf');
   if (shelf) {

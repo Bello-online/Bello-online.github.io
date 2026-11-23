@@ -7,9 +7,12 @@
 <meta name="description" content="Olaseni Bello is a Toronto software developer with four years of shipping production web applications end to end: React and Vue front ends, Node.js services, Azure, Kubernetes and GitOps.">
 <meta property="og:title" content="Olaseni Bello, software developer in Toronto">
 <meta property="og:description" content="Four years of shipping production web applications end to end. Bell Canada, FinanceCanada.ca, Ontario Public Service.">
-<meta property="og:image" content="assets/portrait.jpg">
-<meta name="theme-color" content="#472913">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23472913'/%3E%3Cpath d='M32 14 50 32 32 50 14 32z' fill='%23e4e0cf'/%3E%3C/svg%3E">
+<meta property="og:image" content="https://bello-online.github.io/assets/portrait.jpg">
+<meta property="og:url" content="https://bello-online.github.io/">
+<meta property="og:type" content="profile">
+<link rel="canonical" href="https://bello-online.github.io/">
+<meta name="theme-color" content="#0d1013">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d1013'/%3E%3Cpath d='M32 14 50 32 32 50 14 32z' fill='%23e1e4e4'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,400&family=Albert+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -36,7 +39,7 @@
 
   <div class="card hero-card">
     <span class="notch n-tl"></span><span class="notch n-tr"></span>
-    <img class="hero-portrait" src="assets/portrait.jpg" width="600" height="710" alt="Olaseni Bello in a blue Bell jacket, seated in front of a tall window with evergreens behind">
+    <img class="hero-portrait" src="assets/portrait.jpg" fetchpriority="high" width="600" height="710" alt="Olaseni Bello in a blue Bell jacket, seated in front of a tall window with evergreens behind">
     <h1 class="name"><span class="name-a">Olaseni</span> <span class="name-b">Bello</span></h1>
     <p class="hero-line">Software developer in Toronto, Ontario</p>
     <span class="diamond" aria-hidden="true"></span>
@@ -54,8 +57,8 @@
 
 <!-- About: the letter -->
 <section class="letter-wrap" id="about">
-  <article class="sheet">
-    <img class="sheet-face reveal" src="assets/portrait-square.jpg" width="420" height="420" alt="" loading="lazy">
+  <article class="sheet reveal">
+    <img class="sheet-face reveal" src="assets/portrait-square.jpg" width="420" height="420" alt="" loading="lazy" decoding="async">
     <h2 class="sheet-head reveal">A note before the details</h2>
     <div class="sheet-body">
       <p class="reveal">I build web applications and stay with them after they ship. Most of my work is React and Vue.js in TypeScript on top of Node.js services and REST APIs, in enterprise systems that also run on C#, .NET and Java, with PostgreSQL, SQL Server and Azure underneath.</p>
@@ -69,7 +72,7 @@
       <a class="tear-mail" href="mailto:olasenibello38@gmail.com">olasenibello38@gmail.com</a>
       <a class="btn btn-ink" href="mailto:olasenibello38@gmail.com?subject=Hello%20Olaseni">Write to me</a>
     </div>
-    <svg class="scallop scallop-bottom" aria-hidden="true" height="14" width="100%"><defs><pattern id="sc-a" width="28" height="14" patternUnits="userSpaceOnUse"><circle cx="14" cy="14" r="10" fill="#472913"/></pattern></defs><rect width="100%" height="14" fill="url(#sc-a)"/></svg>
+    <svg class="scallop scallop-bottom" aria-hidden="true" height="14" width="100%"><defs><pattern id="sc-a" width="28" height="14" patternUnits="userSpaceOnUse"><circle cx="14" cy="14" r="10" fill="#0d1013"/></pattern></defs><rect width="100%" height="14" fill="url(#sc-a)"/></svg>
   </article>
 </section>
 
@@ -83,7 +86,7 @@
       <div class="bar-panel">
         <p class="role">Creator and lead software developer, freelance. Consumer fintech platform, Canada.</p>
         <a class="shot" href="https://financecanada.ca" target="_blank" rel="noopener">
-          <img src="assets/financecanada.jpg" width="1110" height="782" alt="The FinanceCanada.ca home page: Canada's Independent Financial Guide, with mortgage articles beside a photograph of a parliament building" loading="lazy">
+          <img src="assets/financecanada.jpg" width="1110" height="782" alt="The FinanceCanada.ca home page: Canada's Independent Financial Guide, with mortgage articles beside a photograph of a parliament building" loading="lazy" decoding="async">
           <span>Visit financecanada.ca</span>
         </a>
         <ul>
@@ -132,7 +135,7 @@
 <section class="projects" id="projects">
   <div class="plate reveal">
     <div class="board" id="board" role="img" aria-label="A chessboard. Each project plays the next move of an opening."></div>
-    <p class="board-note" id="board-note">Five projects, five opening moves.</p>
+    <p class="board-note" id="board-note" aria-live="polite">Five projects, five opening moves.</p>
   </div>
 
   <div class="proj-side">
@@ -148,27 +151,27 @@
     </div>
 
     <div class="panels reveal">
-      <article role="tabpanel" id="p0" aria-labelledby="t0" data-move="Pawn to e4">
+      <article role="tabpanel" tabindex="0" id="p0" aria-labelledby="t0" data-move="Pawn to e4">
         <h3>Wealth Folios</h3>
         <p>An investment portfolio analysis tool. It imports brokerage exports such as Wealthsimple, matches trades into FIFO lots, and shows positions with realized and unrealized profit and loss. Owned from idea to a tested, shipped build, with a Supabase edge function handling import processing and persistence.</p>
         <p class="stack-line">React, TypeScript, Next.js, Supabase edge functions, PostgreSQL</p>
       </article>
-      <article role="tabpanel" id="p1" aria-labelledby="t1" data-move="Pawn to e5">
+      <article role="tabpanel" tabindex="0" id="p1" aria-labelledby="t1" data-move="Pawn to e5">
         <h3>Quicklyft</h3>
         <p>A three-sided moving-services marketplace connecting customers, movers and the platform. Stripe takes the payments, Twilio sends the SMS notifications, and Google Maps handles addresses, routing and distance. I designed the booking and quoting flow from request intake through payment and confirmation.</p>
         <p class="stack-line">React, Node.js, Stripe, Twilio, Google Maps Platform</p>
       </article>
-      <article role="tabpanel" id="p2" aria-labelledby="t2" data-move="Knight to f3">
+      <article role="tabpanel" tabindex="0" id="p2" aria-labelledby="t2" data-move="Knight to f3">
         <h3>Anti-Phishing Browser Plugin</h3>
         <p>A client and server security tool that inspects pages and warns people about suspected phishing sites in real time. Detection is split between a lightweight in-browser client and a server-side service, so the extension stays responsive while the heavier checks are centralized.</p>
         <p class="stack-line">JavaScript, browser extension, Node.js</p>
       </article>
-      <article role="tabpanel" id="p3" aria-labelledby="t3" data-move="Knight to c6">
+      <article role="tabpanel" tabindex="0" id="p3" aria-labelledby="t3" data-move="Knight to c6">
         <h3>OneDrug Inc. Health System</h3>
         <p>A health management platform for drug information and patient health records, in progress since January 2024. Backend APIs handle drug databases and health data securely on PostgreSQL. The React interface searches and updates patient records, raises drug interaction warnings in real time, and enforces role-based access control.</p>
         <p class="stack-line">React, Express.js, PostgreSQL, Docker, OAuth</p>
       </article>
-      <article role="tabpanel" id="p4" aria-labelledby="t4" data-move="Bishop to c4">
+      <article role="tabpanel" tabindex="0" id="p4" aria-labelledby="t4" data-move="Bishop to c4">
         <h3>EventTracker</h3>
         <p>An ASP.NET Core MVC application in C# with data modelling, validation and full create, read, update and delete operations backed by a relational database, behind a dynamic Bootstrap interface. In progress since September 2023.</p>
         <p class="stack-line">ASP.NET Core, C# on .NET 7, MVC, JavaScript, Bootstrap</p>
@@ -240,7 +243,7 @@
 <section class="record" id="record">
   <div class="card record-card reveal">
     <h2>On the record</h2>
-    <img src="assets/chess-game-staunton-no-6.jpg" width="1600" height="984" alt="A wooden Staunton chess set laid out for the start of a game" loading="lazy">
+    <img src="assets/chess-game-staunton-no-6.jpg" width="1600" height="984" alt="A wooden Staunton chess set laid out for the start of a game" loading="lazy" decoding="async">
     <h3>Education</h3>
     <p class="names">Mohawk College, Hamilton&nbsp;· Advanced Diploma in Computer Systems Technology, Software Engineering&nbsp;· CGPA 3.7&nbsp;· January 2022 to December 2024&nbsp;· President of the Mohawk Chess Club&nbsp;· Southern Ontario Collegiate, Hamilton&nbsp;· Ontario Secondary School Diploma, 2021&nbsp;· Valedictorian&nbsp;· Ontario Scholar Award</p>
     <h3>Hackathons</h3>
@@ -252,7 +255,7 @@
 
 <!-- Contact: visit card on a photograph -->
 <section class="contact" id="contact">
-  <img class="contact-photo" src="assets/toronto-skyline-at-night-2024-08-23.jpg" width="1600" height="782" alt="The Toronto skyline at dusk seen across the water, the CN Tower lit at its centre" loading="lazy">
+  <img class="contact-photo" src="assets/toronto-skyline-at-night-2024-08-23.jpg" width="1600" height="782" alt="The Toronto skyline at dusk seen across the water, the CN Tower lit at its centre" loading="lazy" decoding="async">
   <div class="visit">
     <h2>Say hello</h2>
     <p>Toronto, Ontario<br>Open to software developer roles</p>
@@ -272,13 +275,13 @@
 <!-- Footer: the back of the card -->
 <footer class="back">
   <div class="back-panel">
-    <svg class="scallop scallop-top" aria-hidden="true" height="26" width="100%"><defs><pattern id="sc-b" width="52" height="26" patternUnits="userSpaceOnUse"><circle cx="26" cy="0" r="20" fill="#472913"/></pattern></defs><rect width="100%" height="26" fill="url(#sc-b)"/></svg>
+    <svg class="scallop scallop-top" aria-hidden="true" height="26" width="100%"><defs><pattern id="sc-b" width="52" height="26" patternUnits="userSpaceOnUse"><circle cx="26" cy="0" r="20" fill="#0d1013"/></pattern></defs><rect width="100%" height="26" fill="url(#sc-b)"/></svg>
     <div class="back-left">
       <p class="back-sign">Your move.</p>
       <p>If you are hiring a developer who owns the work from the design to the dashboard that proves it runs, I would like to hear about it.</p>
     </div>
     <div class="back-right">
-      <img class="stamp" src="assets/portrait-square.jpg" width="420" height="420" alt="" loading="lazy">
+      <img class="stamp" src="assets/portrait-square.jpg" width="420" height="420" alt="" loading="lazy" decoding="async">
       <a href="mailto:olasenibello38@gmail.com">olasenibello38@gmail.com</a>
       <a href="tel:+12899415184">289-941-5184</a>
       <a href="https://github.com/Bello-online" target="_blank" rel="noopener">github.com/Bello-online</a>
